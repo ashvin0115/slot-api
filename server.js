@@ -36,6 +36,10 @@ app.use(cors());
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Alive');
+});
+
 app.get('/config', (req, res) => {
   const list = [1, 2, 5, 10, 20, 50, 100];
   res.send(list);
